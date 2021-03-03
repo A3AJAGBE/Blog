@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Aminat Ajagbe, A3AJAGBE">
     <title>A3AJAGBE BLOG</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="shortcut icon" href="static/images/favicon.ico">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="shortcut icon" href="../static/images/favicon.ico">
 </head>
 <body>
 
 <header>
-    <h1 class="title">A3AJAGBE BLOG</h1>
+    <h1 class="title"><a href="{{ url_for('home') }}">A3AJAGBE BLOG</a></h1>
 </header>
 
 <main>
@@ -27,7 +27,7 @@
 </main>
 
 <footer>
-    <p>© {{year}}. Developed & Designed by: A3AJAGBE</p>
+    <p>© {{year}}. Developed & Designed by: <a href="http://a3ajagbe-nc.herokuapp.com">A3AJAGBE</a></p>
 </footer>
 
 </body>
