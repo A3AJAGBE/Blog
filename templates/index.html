@@ -15,31 +15,19 @@
 </header>
 
 <main>
-    <div class="content">
+    {% for blog in blogs %}
+        <div class="content">
         <div class="card">
-            <h2>Just a blog post</h2>
-            <p class="text">Lorem ipsum dolor sit </p>
+            <h2>{{blog.title}}</h2>
+            <p class="text">{{blog.subtitle}}</p>
             <a href="#">Read</a>
         </div>
     </div>
-    <div class="content">
-        <div class="card">
-            <h2>Another blog post</h2>
-            <p class="text">Lorem ipsum dolor sit </p>
-            <a href="#">Read</a>
-        </div>
-    </div>
-    <div class="content">
-        <div class="card">
-            <h2>Another blog post</h2>
-            <p class="text">Lorem ipsum dolor sit </p>
-            <a href="#">Read</a>
-        </div>
-    </div>
+    {% endfor %}
 </main>
 
 <footer>
-    <p>©2021. Developed & Designed by: A3AJAGBE</p>
+    <p>© {{year}}. Developed & Designed by: A3AJAGBE</p>
 </footer>
 
 </body>
