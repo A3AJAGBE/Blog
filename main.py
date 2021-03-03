@@ -3,6 +3,9 @@ from datetime import datetime
 from blog import Blog
 import requests
 
+# Get the year
+current_year = datetime.now().year
+
 blogs = requests.get("https://api.npoint.io/5abcca6f4e39b4955965").json()
 blog_list = []
 for blog in blogs:
@@ -14,8 +17,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    current_year = datetime.now().year
     return render_template('index.html', year=current_year, blogs=blog_list)
+
+
+@app.route("/blog/<int:blog_id>")
+def blog(blog_id):
+    detail_blog = None
+    for blog_post in blog_list:
+        if blog_post.id == blog_id:
+            detail_blog = blog_post
+    return render_template("blog.html", year=current_year, blog=detail_blog)
 
 
 if __name__ == '__main__':
