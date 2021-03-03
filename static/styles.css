@@ -4,6 +4,15 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    font-style: oblique;
+}
+
 header {
     background: #55b0c1;
     height: 100px;
