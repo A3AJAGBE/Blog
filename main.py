@@ -6,10 +6,10 @@ import requests
 # Get the year
 current_year = datetime.now().year
 
-blogs = requests.get("https://api.npoint.io/5abcca6f4e39b4955965").json()
+blogs = requests.get("https://api.npoint.io/43644ec4f0013682fc0d").json()
 blog_list = []
 for blog in blogs:
-    blog = Blog(blog["id"], blog["title"], blog["subtitle"], blog["body"])
+    blog = Blog(blog["id"], blog["title"], blog["subtitle"], blog["body"], blog["image_url"], blog["date"], blog["author"])
     blog_list.append(blog)
 
 app = Flask(__name__)
