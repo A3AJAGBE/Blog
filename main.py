@@ -20,6 +20,11 @@ def home():
     return render_template('index.html', year=current_year, blogs=blog_list)
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html', year=current_year)
+
+
 @app.route("/blog/<int:blog_id>")
 def blog(blog_id):
     detail_blog = None
